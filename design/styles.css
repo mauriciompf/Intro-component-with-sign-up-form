@@ -34,6 +34,15 @@ body::before {
     z-index: -1; 
 }
 
+button {
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    font: inherit;
+}
+
 /* --- MAIN STYLES --- */
 .main {
     margin: 3rem auto;
@@ -46,6 +55,7 @@ body::before {
 /* Column ONE */
 .main__col-1 {
     text-align: center;
+    margin-bottom: 2.5rem;
 }
 
 .main__col-1-title {
@@ -59,6 +69,74 @@ body::before {
 }
 
 /* Column TWO */
+
+.main__col-2 {
+    text-align: center;
+}
+
+.main__col-2-pop {
+    color: white;
+    background-color: var(--clr-accent-blue);
+    border-radius: .5rem;
+    box-shadow: 0 0.5rem 0.125rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    padding: 1rem 3rem;
+}
+
+.main__col-2-form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.main__col-2-input-box {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.main__col-2-input {
+    padding: 1rem;
+    width: 100%;
+    border: .1rem solid var(--clr-neutral-grayish-blue);
+    border-radius: .5rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.main__col-2-placeholder {
+    color: gray;
+    font-weight: 600;
+    position: absolute;
+    top: 1.0625rem;
+    left: 1.0625rem;
+    pointer-events: none;
+    transition: .2s ease all;
+}
+
+.main__col-2-input:focus + .main__col-2-placeholder,
+.main__col-2-input:not(:placeholder-shown) + .main__col-2-placeholder {
+  visibility: hidden;
+}
+
+.main__col-2-input:focus + .main__col-2-placeholder::before,
+.main__col-2-input:not(:placeholder-shown) + .main__col-2-placeholder::before {
+  visibility: visible;
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
+.main__col-2-placeholder::before {
+  content: attr(data-label);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.5;
+}
+
+.main__col-2-input {
+  position: relative;
+}
 
 /* --- FOOTER STYLES --- */
 
