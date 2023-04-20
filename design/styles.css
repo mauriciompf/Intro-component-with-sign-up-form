@@ -101,6 +101,7 @@ input {
     border-radius: .5rem;
     font-weight: 600;
     font-size: 1rem;
+    position: relative;
 }
 
 .main__col-2-placeholder {
@@ -110,32 +111,12 @@ input {
     top: 1.0625rem;
     left: 1.0625rem;
     pointer-events: none;
+    visibility: visible;
     transition: .2s ease all;
 }
 
-.main__col-2-input:focus + .main__col-2-placeholder,
-.main__col-2-input:not(:placeholder-shown) + .main__col-2-placeholder {
-  visibility: hidden;
-}
-
-.main__col-2-input:focus + .main__col-2-placeholder::before,
-.main__col-2-input:not(:placeholder-shown) + .main__col-2-placeholder::before {
-  visibility: visible;
-  transform: translateY(-20px);
-  opacity: 1;
-}
-
-.main__col-2-placeholder::before {
-  content: attr(data-label);
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  transition: all 0.2s ease-in-out;
-  opacity: 0.5;
-}
-
-.main__col-2-input {
-  position: relative;
+.main__col-2-input:valid {
+    z-index: 10;
 }
 
 /* --- FOOTER STYLES --- */
