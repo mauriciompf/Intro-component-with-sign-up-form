@@ -151,6 +151,13 @@ input {
     z-index: 10;
 }
 
+.main__col-2-error {
+    color: var(--clr-primary-red);
+    margin-top: .5rem;
+    text-align: right;
+    font-size: .9rem;
+}
+
 .main__col-2-submit {
     background-color: var(--clr-primary-green);
     color: #FFFFFF;
