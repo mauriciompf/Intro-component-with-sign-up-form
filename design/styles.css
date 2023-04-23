@@ -151,11 +151,22 @@ input {
     z-index: 10;
 }
 
+.main__col-2-icon {
+    display: none;
+}
+
+.main__col-2-icon.active {
+    display: inline-block;
+    position: absolute;
+    right: 2rem;
+    transform: translateY(75%);
+}
+
 .main__col-2-error {
     color: var(--clr-primary-red);
     margin-top: .5rem;
     text-align: right;
-    font-size: .9rem;
+    font-size: .8rem;
 }
 
 .main__col-2-submit {
